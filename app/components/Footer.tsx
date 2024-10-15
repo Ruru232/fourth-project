@@ -16,7 +16,7 @@ export default function Footer() {
               <Link href={'/'}>RS Shop</Link>
             </li>
             <li className="font-jost text-xl text-center">
-              Electronics, Jewelery, Men's & Women's clothing
+              Electronics, Jewelery, Men&apos;s & Women&apos;s clothing
             </li>
           </ul>
           <ul className="flex flex-col justify-center font-jost ml-10 text-lg xsm:mt-10 lg:mt-0">

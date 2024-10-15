@@ -102,8 +102,8 @@ export default function Page() {
           <option value="">Filter by:</option>
           <option value="electronics">Electronics</option>
           <option value="jewelery">Jewelery</option>
-          <option value="men's clothing">Men's Clothing</option>
-          <option value="women's clothing">Women's Clothing</option>
+          <option value="men's clothing">Men&apos;s Clothing</option>
+          <option value="women's clothing">Women&apos;s Clothing</option>
         </select>
         <select
           value={sortOption}

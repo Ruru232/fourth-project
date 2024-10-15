@@ -17,6 +17,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import Loading from '../cart/loading';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function CartPage() {
   const { cartItems, removeFromCart, addToCart, clearCart } = useCart();
@@ -82,7 +83,12 @@ export default function CartPage() {
           <div className="divide-y">
             {cartItems.map((item: CartItem) => (
               <div key={item.id} className="py-4 flex items-center space-x-4">
-                <img src={item.image} alt={item.title} className="w-24 h-24" />
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={96}
+                  height={96}
+                />
                 <div>
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p>Price: ${item.price}</p>

@@ -25,7 +25,8 @@ export default function LoginPage() {
       const users = await response.json();
 
       const user = users.find(
-        (user: any) => user.username === username && user.password === password
+        (user: { username: string; password: string }) =>
+          user.username === username && user.password === password
       );
 
       if (user) {

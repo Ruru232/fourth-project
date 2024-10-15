@@ -9,7 +9,6 @@ import {
 } from '@/components/ui/card';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Skeleton } from '@/components/ui/skeleton';
 import { motion } from 'framer-motion';
 import WavyUnderlineLink from './WavyUnderlineLink2';
@@ -63,8 +62,8 @@ export default function FeaturedProducts() {
             animate={{ opacity: 1, scale: 1 }}
           >
             {features.map((feature) => (
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <Card key={feature.id} className="w-64 font-jost">
+              <motion.div whileHover={{ scale: 1.1 }} key={feature.id}>
+                <Card className="w-64 font-jost">
                   <CardHeader>
                     <CardTitle>{feature.title.slice(0, 20)}...</CardTitle>
                     <CardDescription>

@@ -68,8 +68,8 @@ export default function Categories() {
           animate={{ opacity: 1, scale: 1 }}
         >
           {categories.map((category, index) => (
-            <motion.div whileHover={{ scale: 1.1 }}>
-              <Card key={index} className="w-64 font-jost">
+            <motion.div whileHover={{ scale: 1.1 }} key={index}>
+              <Card className="w-64 font-jost">
                 <CardHeader>
                   <CardTitle>
                     {category.charAt(0).toUpperCase() + category.slice(1)}
