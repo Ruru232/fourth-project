@@ -18,10 +18,10 @@ export default function Products({ product }: props) {
         <ProductImage product={product} fill />
       </div>
       <div className="font-semibold flex items-center justify-between mt-4 mb-1">
-        <h2 className="w-44 truncate">{product.title}</h2>
+        <h2 className="w-44 text-lg truncate">{product.title}</h2>
         <p className="text-gray-500 font-bold">${product.price}</p>
       </div>
-      <p className="italic text-xs w-64 line-clamp-2 text-gray-600">
+      <p className="italic text-sm w-64 line-clamp-2 text-gray-600">
         {product.description}
       </p>
       <div className="flex items-center text-sm my-4">
