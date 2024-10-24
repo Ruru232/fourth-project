@@ -71,12 +71,13 @@ export default function FeaturedProducts() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="w-full h-48 relative">
+                    <div className="w-full h-48 flex justify-center items-center">
                       <Image
                         src={feature.image}
                         alt={`Image for ${feature.title}`}
-                        layout="fill"
-                        objectFit="contain"
+                        width={100}
+                        height={50}
+                        style={{ width: 'auto', height: 'auto' }}
                       />
                     </div>
                   </CardContent>

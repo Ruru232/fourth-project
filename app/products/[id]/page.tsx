@@ -20,7 +20,7 @@ export default async function ProductPage({ params: { id } }: Props) {
         <ProductImage product={product} />
         <div className="divide-y">
           <div className="space-y-2 pb-8">
-            <h2 className="text-2xl mt-10 md:text-4xl font-bold">
+            <h2 className="lg:text-4xl md:text-2xl xsm:text-lg mt-10 font-bold">
               {product.title}
             </h2>
             <p className="text-gray-500 font-bold text-xl md:text-3xl">
@@ -28,7 +28,9 @@ export default async function ProductPage({ params: { id } }: Props) {
             </p>
           </div>
           <div className="pt-8">
-            <p className="text-xs md:text-sm">{product.description}</p>
+            <p className="lg:text-lg md:text-base xsm:text-sm ">
+              {product.description}
+            </p>
           </div>
           <div className="flex items-center text-sm my-4 pt-5 ">
             <p>{product?.rating.rate}</p>

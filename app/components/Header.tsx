@@ -65,12 +65,14 @@ export default function Header() {
           >
             {products.map((product) => (
               <SwiperSlide key={product.id}>
-                <div className="w-full h-[500px]">
+                <div className="w-full h-[500px] flex justify-center bg-white">
                   <Image
                     src={product.image}
                     alt={`Product Logo ${product.id}`}
-                    layout="fill"
-                    objectFit="fill"
+                    width={200}
+                    height={200}
+                    style={{ width: 'auto', height: 'auto' }}
+                    priority
                     className="opacity-80"
                   />
                 </div>

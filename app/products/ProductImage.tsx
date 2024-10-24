@@ -16,7 +16,9 @@ export default function ProductImage({ product, fill }: Props) {
       {fill ? (
         <Image
           src={product.image}
-          layout="fill"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority
           alt={product.title}
           className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
             loading
@@ -31,6 +33,7 @@ export default function ProductImage({ product, fill }: Props) {
           alt={product.title}
           width={400}
           height={1000}
+          priority
           className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
             loading
               ? 'scale-110 blur-2xl grayscale'

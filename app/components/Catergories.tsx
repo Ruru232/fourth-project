@@ -77,13 +77,14 @@ export default function Categories() {
                   <CardDescription>{`Explore ${category} products`}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="w-full h-48 relative">
+                  <div className="w-full h-48 flex justify-center items-center">
                     {getImageForCategory(category) && (
                       <Image
                         src={getImageForCategory(category) as string}
                         alt={`Image for ${category}`}
-                        layout="fill"
-                        objectFit="contain"
+                        width={100}
+                        height={50}
+                        style={{ width: 'auto', height: 'auto' }}
                       />
                     )}
                   </div>
