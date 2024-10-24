@@ -80,7 +80,7 @@ export default function CartPage() {
         <p className="mt-4">Your cart is empty.</p>
       ) : (
         <>
-          <div className="divide-y">
+          <div className="divide-y overflow-auto max-h-[80vh]">
             {cartItems.map((item: CartItem) => (
               <div key={item.id} className="py-4 flex items-center space-x-4">
                 <Image
@@ -88,6 +88,8 @@ export default function CartPage() {
                   alt={item.title}
                   width={96}
                   height={96}
+                  style={{ width: 'auto', height: 'auto' }}
+                  priority
                 />
                 <div>
                   <h3 className="text-xl font-semibold">{item.title}</h3>
@@ -153,7 +155,6 @@ export default function CartPage() {
               Total Amount: ${totalAmount.toFixed(2)}
             </p>
           </div>
-
           <AlertDialog>
             <AlertDialogTrigger className="p-2 font-jost w-full rounded-2xl border border-slate-600 hover:border-blue-600 hover:bg-transparent hover:text-black">
               Checkout

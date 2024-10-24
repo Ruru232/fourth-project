@@ -31,8 +31,9 @@ export default function ProductImage({ product, fill }: Props) {
         <Image
           src={product.image}
           alt={product.title}
-          width={400}
-          height={1000}
+          width={300}
+          height={100}
+          style={{ width: 'auto', height: 'auto' }}
           priority
           className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
             loading
