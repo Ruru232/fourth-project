@@ -83,14 +83,17 @@ export default function CartPage() {
           <div className="divide-y overflow-auto max-h-[80vh]">
             {cartItems.map((item: CartItem) => (
               <div key={item.id} className="py-4 flex items-center space-x-4">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={96}
-                  height={96}
-                  style={{ width: 'auto', height: 'auto' }}
-                  priority
-                />
+                <div className="w-24 h-auto">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-full h-auto"
+                    priority
+                  />
+                </div>
                 <div>
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p>Price: ${item.price}</p>
@@ -165,23 +168,17 @@ export default function CartPage() {
                   Thank you for your purchase! Here is your receipt
                 </AlertDialogTitle>
                 <AlertDialogDescription>
-                  {cartItems.length > 0 ? (
-                    <div>
-                      {cartItems.map((item: CartItem) => (
-                        <div key={item.id} className="mb-4">
-                          <p>Title: {item.title}</p>
-                          <p>Quantity: {item.quantity}</p>
-                          <p>
-                            Item Sub-Total: $
-                            {(item.price * item.quantity).toFixed(2)}
-                          </p>
-                        </div>
-                      ))}
-                      <p>Total Amount: ${totalAmount.toFixed(2)}</p>
-                    </div>
-                  ) : (
-                    <p>No items in the cart</p>
-                  )}
+                  {cartItems.map((item: CartItem) => (
+                    <span key={item.id} className="mb-4 grid grid-cols-1">
+                      <span>Item: {item.title}</span>
+                      <span>Quantity: {item.quantity}</span>
+                      <span>
+                        Item Sub-Total: $
+                        {(item.price * item.quantity).toFixed(2)}
+                      </span>
+                    </span>
+                  ))}
+                  <span>Total Amount: ${totalAmount.toFixed(2)}</span>
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
