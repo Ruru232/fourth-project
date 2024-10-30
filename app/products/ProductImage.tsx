@@ -20,7 +20,7 @@ export default function ProductImage({ product, fill }: Props) {
           sizes="(max-width: 768px) 100vw, 50vw"
           priority
           alt={product.title}
-          className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
+          className={`object-contain duration-700 ease-in-out group-hover:opacity-75  ${
             loading
               ? 'scale-110 blur-2xl grayscale'
               : 'scale-100 blur-0 grayscale-0'
@@ -35,7 +35,7 @@ export default function ProductImage({ product, fill }: Props) {
           height={100}
           style={{ width: 'auto', height: 'auto' }}
           priority
-          className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
+          className={`object-contain duration-700 ease-in-out group-hover:opacity-75  ${
             loading
               ? 'scale-110 blur-2xl grayscale'
               : 'scale-100 blur-0 grayscale-0'

@@ -132,7 +132,7 @@ export default function NavBar() {
               </button>
             </Link>
             <button
-              className="xsm:hidden lg:inline ml-2 p-2  rounded-2xl"
+              className="xxsm:hidden lg:inline ml-2 p-2  rounded-2xl"
               onClick={toggleDropdown}
             >
               <UserIcon className="h-8 w-8" />
@@ -190,7 +190,7 @@ export default function NavBar() {
                   whileHover={{ scale: 1.03 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 25 }}
                 >
-                  About Us
+                  <Link href="/about">About Us</Link>
                 </motion.li>
                 <motion.li
                   whileHover={{ scale: 1.03 }}

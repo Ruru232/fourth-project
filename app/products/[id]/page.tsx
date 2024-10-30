@@ -16,7 +16,7 @@ export default async function ProductPage({ params: { id } }: Props) {
     const product: Product = await response.json();
 
     return (
-      <div className="text-black font-jost max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4 mt-48 pb-10 bg-white">
+      <div className="text-black font-jost max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4 mt-48  bg-white p-5">
         <ProductImage product={product} />
         <div className="divide-y">
           <div className="space-y-2 pb-8">
@@ -27,7 +27,7 @@ export default async function ProductPage({ params: { id } }: Props) {
               ${product.price}
             </p>
           </div>
-          <div className="pt-8">
+          <div className="pt-5">
             <p className="lg:text-lg md:text-base xsm:text-sm ">
               {product.description}
             </p>
