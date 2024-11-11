@@ -102,7 +102,7 @@ export default function NavBar() {
           <>
             <Link href="/login">
               <motion.button
-                className="xsm:hidden lg:inline ml-5 p-2 font-jost border w-24 border-black rounded-2xl"
+                className="xxsm:hidden lg:inline ml-5 p-2 font-jost border w-24 border-black rounded-2xl"
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 25 }}
               >
@@ -111,7 +111,7 @@ export default function NavBar() {
             </Link>
             <Link href="/register">
               <motion.button
-                className="xsm:hidden lg:inline ml-5 w-24 bg-black font-jost text-white p-2 rounded-2xl"
+                className="xxsm:hidden lg:inline ml-5 w-24 bg-black font-jost text-white p-2 rounded-2xl"
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 25 }}
               >
